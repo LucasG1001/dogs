@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Api from "../api/Api";
+import Home from "./Components/Home";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Login from "./Components/Login/Login";
 
 function App() {
   return (
     <>
       <div>
-        App React
-        <Api />
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
       </div>
     </>
   );
