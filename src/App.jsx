@@ -1,11 +1,14 @@
 import { useState } from "react";
+import "./App.css";
+import Api from "../api/Api";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>App React</div>
+      <div>
+        App React
+        <Api />
+      </div>
     </>
   );
 }
